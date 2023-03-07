@@ -1,0 +1,134 @@
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  /* background: linear-gradient(59deg, #f2f2f2, #f3e9d2); */
+  background-color: rgb(84, 137, 183);
+}
+
+.start-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 250px;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.prompt {
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 1.25rem;
+}
+
+.prompt-buttons {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+
+button {
+  background: linear-gradient(28deg, #60e1e0, #01baef);
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  width: 120px;
+  align-self: center;
+  transition: transform 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translate(-1%, -3%);
+}
+
+.input-window {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  gap: 5px;
+  background: linear-gradient(175deg, #06d6a0, #bfd7ea);
+  width: 200px;
+  padding: 10px 0 10px 0;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.input-window > input {
+  all: unset;
+  background-color: white;
+  border-radius: 20px;
+  border: 0.5px solid lightgray;
+  height: 38px;
+  width: 150px;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.input-window > input:focus {
+  background-color: #e7ebef;
+}
+
+.submit-btn-1,
+.submit-btn-2 {
+  background: #00a2b8;
+}
+
+.result-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(40, 36, 52);
+  padding: 20px 10px;
+  width: 250px;
+  border-radius: 5px;
+}
+
+.result {
+  background-color: #000000;
+  border: 0.5px solid rgb(174, 174, 174);
+  border-radius: 25px;
+  margin-top: 15px;
+  padding: 15px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.exit {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  background-color: white;
+  width: 10%;
+  text-align: center;
+  border-radius: 90%;
+  padding: 4px 0;
+  transition: transform 0.3s;
+}
+
+.exit:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* ------- Hidden Class --------- */
+
+.hidden {
+  display: none;
+}

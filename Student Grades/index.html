@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grades Program</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="start-window">
+      <div class="prompt">What would you like to do?</div>
+      <div class="prompt-buttons">
+        <button class="IG">Input Grade</button>
+        <button class="GG">Get Grade</button>
+        <button class="EG">Edit Grade</button>
+        <button class="DG">Delete Grade</button>
+        <button class="GA">Get All</button>
+      </div>
+    </div>
+    <div class="input-window input-FLG hidden">
+      <input type="text" placeholder="First Name" class="first-name-1" />
+      <input type="text" placeholder="Last Name" class="last-name-1" />
+      <input type="text" placeholder="Grade" class="Grade" />
+      <button class="submit-btn-1">Submit</button>
+    </div>
+    <div class="input-window input-FL hidden">
+      <input type="text" placeholder="First Name" class="first-name-2" />
+      <input type="text" placeholder="Last Name" class="last-name-2" />
+      <button class="submit-btn-2">Submit</button>
+    </div>
+    <div class="result-container hidden">
+      <div class="exit">&#10005;</div>
+      <div class="result initResult"></div>
+    </div>
+  </body>
+</html>
