@@ -20,7 +20,7 @@ def input_grade():
             return json.dumps(gradesDict)
         else:
             return json.dumps("Error")
-    return render_template('index.html')
+    return render_template('index.html') 
 
 @app.route("/grades/<name>", methods=["GET", "DELETE"])
 def get_grade(name):
