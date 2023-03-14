@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main.css') }}"
+    />
+    <script defer src="{{url_for('static', filename='script.js')}}"></script>
+  </head>
+  <body>
+    <div class="forms">
+      <div class="post-form form">
+        <h2>Post Form</h2>
+        <hr />
+        <input
+          class="student-name"
+          type="text"
+          placeholder="Name"
+          name="Name"
+        />
+        <input class="grade" type="text" placeholder="Grade" name="Grade" />
+        <input class="submitBtn" type="submit" value="Submit" />
+      </div>
+      <div class="get-form form">
+        <h2>Get Form</h2>
+        <hr />
+        <input
+          class="get-student-name"
+          type="text"
+          placeholder="Name"
+          name="Name"
+        />
+        <input class="get-submitBtn" type="submit" value="Submit" />
+      </div>
+      <div class="del-form form">
+        <h2>Delete Form</h2>
+        <hr />
+        <input
+          class="del-student-name"
+          type="text"
+          placeholder="Name"
+          name="Name"
+        />
+        <input class="del-submitBtn" type="submit" value="Submit" />
+      </div>
+      <div class="get-all-form form">
+        <h2>Get All</h2>
+        <hr />
+        <input class="get-all-submitBtn" type="submit" value="Submit" />
+      </div>
+    </div>
+    <div class="result-box hidden">
+      <div class="results"></div>
+    </div>
+  </body>
+</html>
