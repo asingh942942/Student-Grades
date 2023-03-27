@@ -4,6 +4,10 @@ const stu_name = document.querySelector(".student-name");
 const grade = document.querySelector(".grade");
 const submitBtn = document.querySelector(".submitBtn");
 
+const put_stu_name = document.querySelector(".put-student-name");
+const put_grade = document.querySelector(".put-grade");
+const put_submitBtn = document.querySelector(".put-submitBtn");
+
 const get_stu_name = document.querySelector(".get-student-name");
 const get_submitBtn = document.querySelector(".get-submitBtn");
 
@@ -36,6 +40,30 @@ function inputGrade() {
   resultBox.classList.remove("hidden");
   stu_name.value = grade.value = "";
   submitBtn.removeEventListener("click", this);
+}
+
+function editGrade() {
+  handleResults();
+  fetch("/grades", {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      name: put_stu_name.value,
+      grade: Number(put_grade.value),
+    }),
+  })
+    .then((response) => response.json()) // json() returns a promise that turns the response from the fetch request from json into a js object
+    .then((data) => handleData(data))
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+
+  resultBox.classList.remove("hidden");
+  put_stu_name.value = put_grade.value = "";
+  put_submitBtn.removeEventListener("click", this);
 }
 
 function getGrade() {
@@ -105,6 +133,7 @@ function handleResults() {
 }
 
 submitBtn.addEventListener("click", inputGrade);
+put_submitBtn.addEventListener("click", editGrade);
 get_submitBtn.addEventListener("click", getGrade);
 del_submitBtn.addEventListener("click", deleteGrade);
 get_all_submitBtn.addEventListener("click", getAllGrades);

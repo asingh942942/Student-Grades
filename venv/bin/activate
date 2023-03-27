@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/akash/Desktop/CSE106/Lab6/venv"
+VIRTUAL_ENV="/Users/akash/Desktop/CSE106/Lab7/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
